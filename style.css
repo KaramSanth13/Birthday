@@ -332,21 +332,27 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 /* Responsive */
 @media(max-width:768px){
-    .split-layout{flex-direction:column;text-align:center;gap:20px;max-height:none;overflow:visible;}
-    .image-col{max-height:none;}
-    .elegant-portrait{max-height:45vh;width:auto;max-width:100%;}
+    body { overflow-y: auto !important; overflow-x: hidden; }
+    .snap-container { height: auto !important; overflow-y: visible !important; scroll-snap-type: none !important; }
+    .snap-section { height: auto !important; min-height: 100svh; max-height: none !important; padding: 70px 16px 80px 16px; scroll-snap-align: none !important; }
+    .split-layout{flex-direction:column;text-align:center;gap:24px;max-height:none;overflow:visible;}
+    .image-col{max-height:none; width: 100%;}
+    .elegant-portrait{max-height:50vh;width:100%;max-width:100%;object-fit:cover;}
     .left-align{text-align:center;}
     .trait-tags{justify-content:center;}
-    .gallery-item{flex:0 0 min(90vw,300px);height:min(42vh,320px);}
-    .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
-    .snap-section{height:auto;min-height:100dvh;max-height:none;padding:50px 14px;}
-    .corner-decor{width:100px;}
-    .panda-cake{width:180px;}
-    .cake-base-tier{width:180px;}
-    .cake-mid-tier{width:140px;}
-    .cake-top-tier{width:100px;}
-    .cake-plate{width:200px;}
+    .gallery-scroll-area { max-height: 60vh; overflow-y: auto; margin-top: 10px; }
+    .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap: 10px;}
+    .messages-scroll-area { max-height: 65vh; padding-bottom: 20px; }
+    .message-grid { grid-template-columns: 1fr; }
+    .corner-decor{width:80px;}
+    .panda-cake{transform: scale(0.85); transform-origin: center bottom;}
     .cake-scene{max-height:none;}
-    .wish-reveal h3{font-size:1.1rem;}
-    .main-title{font-size:clamp(2.2rem,9vw,3.5rem);}
+    .wish-reveal h3{font-size:1.2rem;}
+    .main-title{font-size:clamp(2.4rem, 12vw, 3.5rem);}
+    .subtitle { font-size: 1.3rem; }
+    .hero-portrait { max-height: 40vh; }
+    .hero-image-wrapper { width: 90%; }
+    .letter-card { width: 95%; padding: 24px 20px; }
+    .letter-title { font-size: 1.6rem; }
+    .letter-msg { font-size: 0.95rem; }
 }
