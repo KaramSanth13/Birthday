@@ -6,7 +6,7 @@ const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('active'); revealObs.unobserve(e.target); }
     });
-}, { root: document.querySelector('.snap-container'), threshold: 0.1 });
+}, { threshold: 0.15 });
 revealEls.forEach(el => revealObs.observe(el));
 
 // ===== ENHANCED CAKE BLOWOUT =====
