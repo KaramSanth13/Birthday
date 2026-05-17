@@ -408,7 +408,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     .wish-reveal h3{font-size:1.2rem;}
     .main-title{font-size:clamp(2.4rem, 12vw, 3.5rem);}
     .subtitle { font-size: 1.3rem; margin-bottom: 0; }
-    #hero { justify-content: flex-start; padding-top: 12vh; gap: 5vh; }
+    #hero { justify-content: center; padding-top: 20px; gap: 4vh; }
     .hero-portrait { max-height: 45vh; }
     .hero-image-wrapper { width: 90%; }
     .letter-card { width: 95%; padding: 24px 20px; }
