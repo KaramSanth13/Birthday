@@ -395,14 +395,12 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 .msg-overlay-wrapper:not(.hidden) .msg-overlay-content { transform: scale(1) translateY(0); opacity: 1; }
 .msg-close { position: absolute; top: 15px; right: 15px; z-index: 10; background: rgba(255,255,255,0.85); border: none; font-size: 1.5rem; line-height: 1; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--black); box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; }
 @media (hover: hover) { .msg-close:hover { background: var(--panda-dark); color: #fff; } }
-.msg-split-layout { display: flex; width: 100%; height: 100%; max-height: 85dvh; }
-.msg-image-col { flex: 0 0 40%; display: flex; align-items: center; justify-content: center; background: transparent; overflow: hidden; position: relative; }
-.msg-sidelay-img { width: 100%; height: 100%; object-fit: contain; object-position: center; mix-blend-mode: multiply; padding: 20px; box-sizing: border-box; }
-.msg-text-col { flex: 1; overflow-y: auto; padding: 40px 35px; }
-.msg-text-col::-webkit-scrollbar { width: 6px; }
-.msg-text-col::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
-.msg-overlay-title { font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--panda-dark); margin-bottom: 20px; text-align: center; }
-.full-message-text { font-size: 1.05rem; line-height: 1.8; color: #444; font-style: italic; white-space: pre-wrap; margin: 0; }
+.msg-overlay-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('Images/with_suriya_anna_text_sidelay.png'); background-size: cover; background-position: center; opacity: 0.15; mix-blend-mode: multiply; z-index: 0; pointer-events: none; }
+.msg-text-wrapper { position: relative; z-index: 1; width: 100%; height: 100%; padding: 50px 45px; overflow-y: auto; }
+.msg-text-wrapper::-webkit-scrollbar { width: 6px; }
+.msg-text-wrapper::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
+.msg-overlay-title { font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--panda-dark); margin-bottom: 25px; text-align: center; }
+.full-message-text { font-size: 1.08rem; line-height: 1.85; color: #333; font-style: italic; white-space: pre-wrap; margin: 0; text-shadow: 0 1px 2px rgba(255,255,255,0.8); }
 .msg-overlay-footer { margin-top: 30px; text-align: right; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 15px; }
 
 
@@ -433,11 +431,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     .letter-card { width: 95%; padding: 24px 20px; }
     .letter-title { font-size: 1.6rem; }
     .letter-msg { font-size: 0.95rem; }
-    
-    .msg-split-layout { flex-direction: column; }
-    .msg-image-col { flex: 0 0 250px; height: 250px; }
-    .msg-sidelay-img { object-position: center; padding-top: 20px; padding-bottom: 0; }
-    .msg-text-col { padding: 25px 20px; }
-    .msg-overlay-title { font-size: 1.8rem; margin-bottom: 15px; }
-    .full-message-text { font-size: 0.95rem; }
+    .msg-text-wrapper { padding: 35px 25px; }
+    .msg-overlay-title { font-size: 1.8rem; margin-bottom: 20px; }
+    .full-message-text { font-size: 0.98rem; }
 }
