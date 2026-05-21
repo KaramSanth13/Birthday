@@ -158,3 +158,29 @@ closeSurpriseBtn.addEventListener('click', (e) => {
 
 // Prevent card clicks from bubbling
 letterCard.addEventListener('click', (e) => { e.stopPropagation(); });
+
+// ===== SURIYA ANNA MSG OVERLAY =====
+const suriyaCard = document.getElementById('suriya-card');
+const suriyaOverlay = document.getElementById('suriya-overlay');
+const closeSuriyaBtn = document.getElementById('close-suriya-overlay');
+
+if (suriyaCard && suriyaOverlay) {
+    suriyaCard.addEventListener('click', () => {
+        suriyaOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    });
+    
+    closeSuriyaBtn.addEventListener('click', () => {
+        suriyaOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+    });
+    
+    // Close on clicking outside content
+    suriyaOverlay.addEventListener('click', (e) => {
+        if (e.target === suriyaOverlay) {
+            suriyaOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
