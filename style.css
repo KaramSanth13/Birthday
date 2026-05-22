@@ -267,7 +267,8 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 
 /* ===== MESSAGES WALL ===== */
-#messages{justify-content:flex-start;padding-top:50px;background:linear-gradient(160deg,#f7f5f0,#eef0eb);}
+#messages{justify-content:flex-start;padding-top:50px;background:linear-gradient(160deg,#fdfbf8,#e6e9e4,#fdfbf8);background-size:400% 400%;animation:bgWave 12s ease infinite;}
+@keyframes bgWave { 0% {background-position:0% 50%;} 50% {background-position:100% 50%;} 100% {background-position:0% 50%;} }
 .messages-scroll-area {
     width: 100%;
     max-width: 1100px;
@@ -280,23 +281,25 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 .messages-scroll-area::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
 
 .message-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    column-count: 3;
+    column-gap: 25px;
     width: 100%;
-    align-items: start;
 }
+@media (max-width: 900px) { .message-grid { column-count: 2; } }
+@media (max-width: 600px) { .message-grid { column-count: 1; } }
 
 .message-card {
-    padding: 24px;
+    padding: 28px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
+    break-inside: avoid;
+    margin-bottom: 25px;
 }
 
 .message-card::before {
@@ -317,27 +320,22 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 @media (hover: hover) {
     .message-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 45px rgba(107,143,94,0.15), 0 0 0 1px rgba(107,143,94,0.2) inset;
     }
 }
 
 
 
 .message-card p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: #333;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: #2b2b2b;
     font-style: italic;
     flex: 1;
     margin: 0;
     width: 100%;
-    max-height: 250px;
-    overflow-y: auto;
-    padding-right: 5px;
 }
-.message-card p::-webkit-scrollbar { width: 4px; }
-.message-card p::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 4px; }
 
 .message-card .sender {
     font-weight: 700;
