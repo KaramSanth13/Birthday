@@ -312,6 +312,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 .message-card {
     padding: 28px 24px;
+    border: 1px solid rgba(212, 163, 115, 0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -322,7 +323,6 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     overflow: hidden;
     break-inside: avoid;
     margin-bottom: 25px;
-    border: 1px solid rgba(0,0,0,0.15) !important;
 }
 
 .message-card::before {
@@ -466,7 +466,8 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     .trait-tags{justify-content:center;}
     .gallery-scroll-area { max-height: none; overflow-y: visible; margin-top: 10px; }
     /* Extreme Performance optimizations for mobile */
-    .glass-panel, .glass-frame, .gallery-card, .morph-blob, .message-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; border: 1px solid rgba(0,0,0,0.05) !important; }
+    .glass-panel, .glass-frame, .gallery-card, .morph-blob { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; border: 1px solid rgba(0,0,0,0.05) !important; }
+    .message-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; border: 1px solid rgba(212, 163, 115, 0.25) !important; }
     .glass-panel, .glass-frame, .gallery-card { background: rgba(255, 253, 252, 0.98) !important; }
     .message-card { background: #fff !important; }
     #messages { animation: none !important; background-size: auto !important; }
