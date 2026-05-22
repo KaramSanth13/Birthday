@@ -421,6 +421,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 /* ===== MSG OVERLAY ===== */
 .clickable-card { cursor: pointer; position: relative; padding-bottom: 50px; }
 .read-more-btn { position: absolute; bottom: 20px; color: var(--bamboo); font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; transition: gap 0.3s; }
+.clickable-card { padding-bottom: 50px !important; cursor: pointer; }
 @media (hover: hover) { .clickable-card:hover .read-more-btn { gap: 8px; } }
 .msg-overlay-wrapper { z-index: 10001; }
 .msg-overlay-content { max-width: 850px; width: 92%; max-height: 85dvh; display: flex; flex-direction: column; position: relative; background: linear-gradient(160deg,#fefcf9 0%,#f5f1eb 100%); padding: 0; overflow: hidden; transform: scale(0.95) translateY(20px); opacity: 0; transition: all 0.5s cubic-bezier(0.34,1.56,0.64,1); border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,0.4); margin: 0 auto; }
