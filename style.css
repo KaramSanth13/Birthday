@@ -322,6 +322,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     overflow: hidden;
     break-inside: avoid;
     margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.15) !important;
 }
 
 .message-card::before {
@@ -444,7 +445,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 .msg-overlay-wrapper:not(.hidden) .msg-overlay-content { transform: scale(1) translateY(0); opacity: 1; }
 .msg-close { position: absolute; top: 15px; right: 15px; z-index: 10; background: rgba(255,255,255,0.85); border: none; font-size: 1.5rem; line-height: 1; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--black); box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; }
 @media (hover: hover) { .msg-close:hover { background: var(--panda-dark); color: #fff; } }
-.msg-overlay-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('Images/with_suriya_anna_text_sidelay.png'); background-size: cover; background-position: center; opacity: 0.15; mix-blend-mode: multiply; z-index: 0; pointer-events: none; }
+.msg-overlay-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('Images/with_suriya_anna_text_sidelay.png'); background-size: cover; background-position: center; opacity: 0.06; mix-blend-mode: multiply; z-index: 0; pointer-events: none; }
 .msg-text-wrapper { position: relative; z-index: 1; width: 100%; height: 100%; padding: 50px 45px; overflow-y: auto; }
 .msg-text-wrapper::-webkit-scrollbar { width: 6px; }
 .msg-text-wrapper::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
