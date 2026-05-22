@@ -62,9 +62,9 @@ cakeContainer.addEventListener('click', () => {
         document.getElementById('panda-cake').classList.add('candles-out');
         cakeContainer.classList.add('smoking');
         if (typeof confetti !== 'undefined') {
-            confetti({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ['#1a1a1a','#3a3a3a','#fff','#aaa','#6b8f5e'] });
-            setTimeout(() => confetti({ particleCount: 60, angle: 120, spread: 55, origin: { x: 1, y: 0.55 }, colors: ['#1a1a1a','#fff','#6b8f5e'] }), 300);
-            setTimeout(() => confetti({ particleCount: 60, angle: 60, spread: 55, origin: { x: 0, y: 0.55 }, colors: ['#1a1a1a','#fff','#6b8f5e'] }), 400);
+            confetti({ particleCount: 120, spread: 80, origin: { y: 0.55 }, colors: ['#1E2320','#D4A373','#fff','#4A6B53','#FAF6F5'] });
+            setTimeout(() => confetti({ particleCount: 60, angle: 120, spread: 55, origin: { x: 1, y: 0.55 }, colors: ['#1E2320','#fff','#D4A373'] }), 300);
+            setTimeout(() => confetti({ particleCount: 60, angle: 60, spread: 55, origin: { x: 0, y: 0.55 }, colors: ['#1E2320','#fff','#D4A373'] }), 400);
         }
     }, 600);
 
@@ -92,9 +92,9 @@ function launchLetterAnimation() {
     // Step 2: burst confetti from top
     setTimeout(() => {
         if (typeof confetti === 'undefined') return;
-        confetti({ particleCount: 140, spread: 100, origin: { y: 0.3 }, colors: ['#6b8f5e','#fff','#e0d8cc','#aaa','#1a1a1a'] });
-        setTimeout(() => confetti({ particleCount: 70, angle: 120, spread: 60, origin: { x: 1, y: 0.4 }, colors: ['#6b8f5e','#fff','#1a1a1a'] }), 300);
-        setTimeout(() => confetti({ particleCount: 70, angle: 60, spread: 60, origin: { x: 0, y: 0.4 }, colors: ['#6b8f5e','#fff','#1a1a1a'] }), 400);
+        confetti({ particleCount: 140, spread: 100, origin: { y: 0.3 }, colors: ['#4A6B53','#fff','#FAF6F5','#D4A373','#1E2320'] });
+        setTimeout(() => confetti({ particleCount: 70, angle: 120, spread: 60, origin: { x: 1, y: 0.4 }, colors: ['#4A6B53','#fff','#1E2320'] }), 300);
+        setTimeout(() => confetti({ particleCount: 70, angle: 60, spread: 60, origin: { x: 0, y: 0.4 }, colors: ['#4A6B53','#fff','#1E2320'] }), 400);
     }, 500);
 
     // Step 3: canvas sparkle burst
@@ -111,7 +111,7 @@ function launchLetterAnimation() {
             vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
             size: Math.random() * 4 + 2,
             opacity: 1,
-            color: ['#fff','#e0d8cc','#6b8f5e','#aaa','#c0b090'][Math.floor(Math.random() * 5)]
+            color: ['#fff','#D4A373','#4A6B53','#FAF6F5','#B58A60'][Math.floor(Math.random() * 5)]
         });
     }
     function animParticles() {
