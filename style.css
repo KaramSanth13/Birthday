@@ -438,9 +438,9 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 /* Responsive */
 @media(max-width:768px){
-    body { overflow-y: auto !important; overflow-x: hidden; }
-    .snap-container { height: auto !important; overflow-y: visible !important; scroll-snap-type: none !important; }
-    .snap-section { height: auto !important; min-height: 100svh; max-height: none !important; padding: 40px 16px 50px 16px; scroll-snap-align: none !important; }
+    body { overflow: hidden !important; }
+    .snap-container { height: 100dvh !important; overflow-y: scroll !important; scroll-snap-type: y proximity !important; }
+    .snap-section { height: auto !important; min-height: 100svh; max-height: none !important; padding: 40px 16px 50px 16px; scroll-snap-align: start !important; scroll-snap-stop: normal !important; }
     .split-layout{flex-direction:column;text-align:center;gap:24px;max-height:none;overflow:visible;}
     .image-col{max-height:none; width: 100%;}
     .elegant-portrait{max-height:50vh;width:100%;max-width:100%;object-fit:cover;}
