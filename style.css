@@ -447,11 +447,15 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     .left-align{text-align:center;}
     .trait-tags{justify-content:center;}
     .gallery-scroll-area { max-height: none; overflow-y: visible; margin-top: 10px; }
-    /* Performance optimizations for mobile */
-    .glass-panel, .glass-frame, .gallery-card, .morph-blob { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
-    .glass-panel, .glass-frame, .gallery-card { background: rgba(255, 253, 252, 0.95) !important; }
+    /* Extreme Performance optimizations for mobile */
+    .glass-panel, .glass-frame, .gallery-card, .morph-blob, .message-card { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; box-shadow: none !important; border: 1px solid rgba(0,0,0,0.05) !important; }
+    .glass-panel, .glass-frame, .gallery-card { background: rgba(255, 253, 252, 0.98) !important; }
+    .message-card { background: #fff !important; }
     #messages { animation: none !important; background-size: auto !important; }
-    .hero-bg-glow, .orb { filter: blur(30px) !important; }
+    .hero-bg-glow, .orb { display: none !important; } /* Hide heavy blurred elements entirely on mobile */
+    .corner-decor, .section-deco { mix-blend-mode: normal !important; filter: none !important; will-change: auto !important; opacity: 0.1 !important; } /* Kill blend modes */
+    img { transform: none !important; filter: none !important; } /* Remove heavy HW acceleration and filters from images */
+    .hero-portrait { animation: none !important; filter: none !important; } /* Stop heavy float animation */
     .snap-container { scroll-behavior: auto !important; }
     
     .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap: 10px;}
