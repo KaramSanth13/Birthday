@@ -13,6 +13,12 @@
     --shadow: 0 8px 40px rgba(0,0,0,0.08);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
+img {
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    filter: contrast(1.02) saturate(1.02);
+}
 body{background:var(--bg);color:var(--black);font-family:'Outfit',sans-serif;-webkit-font-smoothing:antialiased;overflow:hidden;}
 h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
