@@ -95,6 +95,15 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     animation: textShine 5s ease-in-out infinite alternate;
     text-shadow: 0 10px 30px rgba(212,163,115,0.15);
 }
+.name-highlight {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-top: 10px;
+    line-height: 0.8;
+}
 @keyframes textShine { to { background-position: 200% center; } }
 .subtitle{
     color:var(--accent);
@@ -341,6 +350,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 
 
 .message-card p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.08rem;
     line-height: 1.85;
     color: #2b2b2b;
@@ -438,7 +448,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 .msg-text-wrapper::-webkit-scrollbar { width: 6px; }
 .msg-text-wrapper::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
 .msg-overlay-title { font-family: 'Dancing Script', cursive; font-size: 2.2rem; color: var(--panda-dark); margin-bottom: 25px; text-align: center; }
-.full-message-text { font-size: 1.08rem; line-height: 1.85; color: #333; font-style: italic; white-space: pre-wrap; margin: 0; text-shadow: 0 1px 2px rgba(255,255,255,0.8); }
+.full-message-text { font-family: 'Montserrat', sans-serif; font-size: 1.08rem; line-height: 1.85; color: #333; font-style: italic; white-space: pre-wrap; margin: 0; text-shadow: 0 1px 2px rgba(255,255,255,0.8); }
 .msg-overlay-footer { margin-top: 30px; text-align: right; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 15px; }
 
 
