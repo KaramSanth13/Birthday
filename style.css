@@ -432,7 +432,7 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
 @media(max-width:768px){
     body { overflow-y: auto !important; overflow-x: hidden; }
     .snap-container { height: auto !important; overflow-y: visible !important; scroll-snap-type: none !important; }
-    .snap-section { height: auto !important; min-height: 100svh; max-height: none !important; padding: 70px 16px 80px 16px; scroll-snap-align: none !important; }
+    .snap-section { height: auto !important; min-height: 100svh; max-height: none !important; padding: 40px 16px 50px 16px; scroll-snap-align: none !important; }
     .split-layout{flex-direction:column;text-align:center;gap:24px;max-height:none;overflow:visible;}
     .image-col{max-height:none; width: 100%;}
     .elegant-portrait{max-height:50vh;width:100%;max-width:100%;object-fit:cover;}
@@ -440,9 +440,12 @@ h1,h2,h3,.big-reveal{font-family:'Playfair Display',serif;font-weight:700;}
     .trait-tags{justify-content:center;}
     .gallery-scroll-area { max-height: none; overflow-y: visible; margin-top: 10px; }
     .gallery-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap: 10px;}
-    .messages-scroll-area { max-height: none; overflow-y: visible; padding-bottom: 20px; }
+    #messages { padding-top: 30px; }
+    .messages-scroll-area { max-height: none; overflow-y: visible; padding-bottom: 10px; margin-top: 10px; }
+    .message-grid { column-count: 1; column-gap: 16px; margin-top: 10px; }
+    .message-card { padding: 20px 16px; gap: 12px; margin-bottom: 16px; }
+    .message-card p { font-size: 1rem; line-height: 1.6; }
     .reveal-btn:active, .close-btn:active { transform: scale(0.95); transition: transform 0.1s; }
-    .message-grid { grid-template-columns: 1fr; }
     .corner-decor{width:80px;}
     .panda-cake{transform: scale(0.85); transform-origin: center bottom;}
     .cake-scene{max-height:none;}
